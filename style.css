@@ -43,7 +43,7 @@ body {
 
 .heading-primary-main {
     display: block;
-    font-size: 8rem;
+    font-size: 5rem;
     animation-name: fromAbove;
     animation-duration: 1s;
 }
@@ -51,7 +51,7 @@ body {
 .heading-primary-sub{
     display: block;
     font-size: 3rem;
-    letter-spacing: 3rem;
+    letter-spacing: 1rem;
     animation-name: fromLeft;
     animation-duration: 1s;
 }
@@ -87,7 +87,7 @@ body {
 }
 
 
-.projects {
+.presentation {
     height: 70vh;
 }
 
