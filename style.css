@@ -1,0 +1,86 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Hind', sans-serif;
+    padding: 0 3rem 3rem 3rem;
+    background-color: #fffafa;
+
+    box-sizing: border-box;
+}
+
+.header {
+    height: 100vh;
+    background-image: linear-gradient(to right bottom, rgba(108, 92, 231, 0.6), rgba(123, 136, 255, 0.8)),
+        url("img/city1.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
+}
+
+.text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.heading-primary {
+    color: #fffff0;
+    /*text-transform: uppercase;*/
+}
+
+.heading-primary-main {
+    display: block;
+    font-size: 8rem;
+    animation-name: fromAbove;
+    animation-duration: 1s;
+}
+
+.heading-primary-sub{
+    display: block;
+    font-size: 3rem;
+    letter-spacing: 3rem;
+}
+
+@keyframes fromAbove{
+    0% {
+        opacity: 0;
+        transform: translateY(-10rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.projects {
+    height: 70vh;
+}
+
+.contact {
+    height: 96.7vh;
+    background-image: linear-gradient(
+                        to right bottom, 
+                        rgba(108, 92, 231, 0.6),
+                        rgba(123, 136, 255, 0.8)),
+                        url("img/space3.jpg");
+    background-size: cover;
+    background-position: bottom;
+
+    /*clip-path: polygon(50% 15%, 100% 0, 100% 85%, 50% 100%, 0 85%, 0 0);*/
+    clip-path: polygon(50% 15%, 100% 0, 100% 100%, 0 100%, 0 0);
+}
