@@ -1,0 +1,29 @@
+@keyframes fromAbove{
+    0% {
+        opacity: 0;
+        transform: translateY(-10rem);
+        transition-delay: 1s;
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes fromLeft{
+    0% {
+        opacity: 0;
+        transform: translateX(-100rem);
+    }
+
+    80% {
+        opacity: 0.3;
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

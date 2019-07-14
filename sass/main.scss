@@ -1,24 +1,13 @@
-$primary-color-1: rgba(108, 92, 231, 0.6);
-$primary-color-2: rgba(123, 136, 255, 0.8);
-$white: #fffafa;
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/variables";
 
-$imgurl-city: "img/city1.jpg";
-$imgurl-space: "img/space3.jpg";
+@import "base/animations";
+@import "base/base";
+@import "base/typography";
+@import "base/utilities";
 
-$clip-first: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
-$clip-last: polygon(50% 15%, 100% 0, 100% 100%, 0 100%, 0 0);
-
-@mixin section-colored($img-url, $background-position) {
-    height: 100vh;
-    background-image: linear-gradient(
-                        to right bottom, 
-                        $primary-color-1,
-                        rgba(123, 136, 255, 0.8)),
-                        url($img-url);
-    background-size: cover;
-    background-position: $background-position;
-    position: relative;
-}
+@import "page/home";
 
 
 *,
@@ -71,36 +60,6 @@ body {
     letter-spacing: 1rem;
     animation-name: fromLeft;
     animation-duration: 1s;
-}
-
-@keyframes fromAbove{
-    0% {
-        opacity: 0;
-        transform: translateY(-10rem);
-        transition-delay: 1s;
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-
-@keyframes fromLeft{
-    0% {
-        opacity: 0;
-        transform: translateX(-100rem);
-    }
-
-    80% {
-        opacity: 0.3;
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
 }
 
 
