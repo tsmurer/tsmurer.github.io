@@ -1,3 +1,26 @@
+$primary-color-1: rgba(108, 92, 231, 0.6);
+$primary-color-2: rgba(123, 136, 255, 0.8);
+$white: #fffafa;
+
+$imgurl-city: "img/city1.jpg";
+$imgurl-space: "img/space3.jpg";
+
+$clip-first: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
+$clip-last: polygon(50% 15%, 100% 0, 100% 100%, 0 100%, 0 0);
+
+@mixin section-colored($img-url, $background-position) {
+    height: 100vh;
+    background-image: linear-gradient(
+                        to right bottom, 
+                        $primary-color-1,
+                        rgba(123, 136, 255, 0.8)),
+                        url($img-url);
+    background-size: cover;
+    background-position: $background-position;
+    position: relative;
+}
+
+
 *,
 *::after,
 *::before {
@@ -12,23 +35,18 @@ html {
 
 body {
     font-family: 'Hind', sans-serif;
-    background-color: #fffafa;
+    background-color: $white;
 
     box-sizing: border-box;
 }
 
 .header {
-    height: 100vh;
-    background-image: linear-gradient(to right bottom, rgba(108, 92, 231, 0.6), rgba(123, 136, 255, 0.8)),
-        url("img/city1.jpg");
-    background-size: cover;
-    background-position: center;
-    position: relative;
+    @include section-colored($imgurl-city, center);
 
-    clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
+    clip-path: $clip-first;
 }
 
-.text-box {
+.header__text-box {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -36,18 +54,18 @@ body {
 }
 
 .heading-primary {
-    color: #fffff0;
+    color: $white;
     /*text-transform: uppercase;*/
 }
 
-.heading-primary-main {
+.heading-primary--main {
     display: block;
     font-size: 5rem;
     animation-name: fromAbove;
     animation-duration: 1s;
 }
 
-.heading-primary-sub{
+.heading-primary--sub{
     display: block;
     font-size: 3rem;
     letter-spacing: 1rem;
@@ -91,15 +109,8 @@ body {
 }
 
 .contact {
-    height: 96.7vh;
-    background-image: linear-gradient(
-                        to right bottom, 
-                        rgba(108, 92, 231, 0.6),
-                        rgba(123, 136, 255, 0.8)),
-                        url("img/space3.jpg");
-    background-size: cover;
-    background-position: bottom;
+    @include section-colored("img/space3.jpg", bottom);
 
     /*clip-path: polygon(50% 15%, 100% 0, 100% 85%, 50% 100%, 0 85%, 0 0);*/
-    clip-path: polygon(50% 15%, 100% 0, 100% 100%, 0 100%, 0 0);
+    clip-path: $clip-last;
 }

@@ -1,0 +1,23 @@
+{
+  "name": "tsmurer.github.io",
+  "version": "1.0.0",
+  "description": "github.io website",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tsmurer/tsmurer.github.io.git"
+  },
+  "author": "Tiago Murer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tsmurer/tsmurer.github.io/issues"
+  },
+  "homepage": "https://github.com/tsmurer/tsmurer.github.io#readme",
+  "dependencies": {
+    "jquery": "^3.4.1",
+    "node-sass": "^4.12.0"
+  }
+}
