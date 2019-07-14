@@ -7,60 +7,34 @@
 @import "base/typography";
 @import "base/utilities";
 
+@import "components/navbar";
+
+@import "layout/header";
+
 @import "page/home";
 
 
-*,
-*::after,
-*::before {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
-}
-
-html {
-    font-size: 62.5%;
-}
-
-body {
-    font-family: 'Hind', sans-serif;
-    background-color: $white;
-
-    box-sizing: border-box;
-}
-
-.header {
-    @include section-colored($imgurl-city, center);
-
-    clip-path: $clip-first;
-}
-
-.header__text-box {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-}
 
 .heading-primary {
     color: $white;
     /*text-transform: uppercase;*/
+
+    &--main {
+        display: block;
+        font-size: 5rem;
+        animation-name: fromAbove;
+        animation-duration: 1s;
+    }
+
+    &--sub{
+        display: block;
+        font-size: 3rem;
+        letter-spacing: 1rem;
+        animation-name: fromLeft;
+        animation-duration: 1s;
+    }
 }
 
-.heading-primary--main {
-    display: block;
-    font-size: 5rem;
-    animation-name: fromAbove;
-    animation-duration: 1s;
-}
-
-.heading-primary--sub{
-    display: block;
-    font-size: 3rem;
-    letter-spacing: 1rem;
-    animation-name: fromLeft;
-    animation-duration: 1s;
-}
 
 
 .presentation {

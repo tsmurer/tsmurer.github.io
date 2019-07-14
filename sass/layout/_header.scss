@@ -1,0 +1,12 @@
+.header {
+    @include section-colored($imgurl-city, center);
+
+    clip-path: $clip-first;
+
+    &__text-box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+}
