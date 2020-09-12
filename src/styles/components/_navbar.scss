@@ -3,29 +3,97 @@
 .navbar {
     width: 100%;
     height: 64px;
-    background-color: $color-primary;
+    background-color: #ffffff;
 
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
 
-    color: white;
+    display: flex;
+    gap: 5rem;
+
+    align-items: center;
+    justify-content: space-between;
+
+    color: $color-primary;
 
     &__logo {
         display: inline-block;
-        position: absolute;
-        top: 50%;
+        position: relative;
 
         padding: 0;
 
         margin-left: 3rem;
-        transform: translateY(-50%);
+
 
         & h2 {
             line-height: 1.5;
             vertical-align: center;
             margin: 0;
-            font-size: 2rem;
+            font-size: 3rem;
+            font-weight: 100;
+            white-space: nowrap;
+            cursor: default;
         }
+    }
+
+    &__info {
+        display: flex;
+        gap: 2rem;
+
+        & a {
+            text-decoration: none;
+        }
+
+        & span {
+            font-size: 1.5rem;
+            font-weight: 100;
+            white-space: nowrap;
+            text-transform: uppercase;
+        }
+    }
+
+    &__links {
+        display: flex;
+        gap: 1rem;
+        margin: 0 3rem 0 0;
+
+        &__icon {
+
+            flex-direction: row;
+            width: 4rem;
+            height: 4rem;
+
+            &--github {
+                fill: green;
+            }
+
+            &--linkedin {
+            }
+
+            &--fb {
+                
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 748.1px) {
+    .mobile {
+        display: none;
+    }
+
+    .navbar__logo {
+        margin-right: 3rem;
+    }
+}
+
+@media screen and (max-width: 748px) {
+    .desktop {
+        display: none;
+    }
+
+    .mobile {
+        margin-right: 1rem;
     }
 }
