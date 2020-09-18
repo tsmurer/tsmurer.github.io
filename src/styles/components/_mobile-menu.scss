@@ -1,0 +1,38 @@
+.menu-container {
+    position: relative;
+    left: 0;
+    top: 0;
+    //transform: translateX(-100%);
+
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    background-color: blue;
+}
+
+
+@media screen and (min-width: 748.1px) {
+    .menu-container {
+        display: none;
+    }
+}
+
+
+
+.outOfView {
+    //background-color: red;
+    
+    animation: slideOutOfView .15s ease-out forwards;
+
+    
+}
+
+@keyframes slideOutOfView {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}

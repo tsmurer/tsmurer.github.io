@@ -69,11 +69,9 @@
             }
 
             &--linkedin {
+                fill: green;
             }
 
-            &--fb {
-                
-            }
         }
     }
 }
@@ -86,6 +84,10 @@
     .navbar__logo {
         margin-right: 3rem;
     }
+
+    .menu-container {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 748px) {
@@ -95,5 +97,21 @@
 
     .mobile {
         margin-right: 1rem;
+    }
+
+}
+
+
+.toView {
+    animation: slideToView 1s ease-in;
+}
+
+@keyframes slideToView {
+    0% {
+        transform: translateX(-100%)
+    }
+
+    100% {
+        transform: translateX(0);
     }
 }
