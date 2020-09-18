@@ -18,7 +18,11 @@ class Navbar extends Component  {
     closeMenu() {
         this.closeRef.current.classList.add(`fadeOut`);
         //this.props.receivedRef.current.classList.add(`toView`);
-        console.log("openMenu rodou");
+        console.log("closeMenu rodou");
+    }
+
+    openMenu() {
+        this.closeRef.current.classList.add(`appear`);
     }
   
 
