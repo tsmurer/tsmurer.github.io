@@ -76,6 +76,21 @@
     }
 }
 
+.mobileMenu {
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, .8);
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    &__closeMobile {
+        position: relative;
+        right: 1rem;
+    }
+}
+
 @media screen and (min-width: 748.1px) {
     .mobile {
         display: none;
@@ -101,17 +116,3 @@
 
 }
 
-
-.toView {
-    animation: slideToView 1s ease-in;
-}
-
-@keyframes slideToView {
-    0% {
-        transform: translateX(-100%)
-    }
-
-    100% {
-        transform: translateX(0);
-    }
-}
