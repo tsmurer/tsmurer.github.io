@@ -11,10 +11,12 @@ class Navbar extends Component  {
         super(props);
         this.state = {}
         // this.abrirMenu = this.abrirMenu.bind(this);
+
+        this.closeRef = React.createRef();
     };
 
-    openMenu() {
-        console.log(this.props.receivedRef);
+    closeMenu() {
+        this.closeRef.current.classList.add(`fadeOut`);
         //this.props.receivedRef.current.classList.add(`toView`);
         console.log("openMenu rodou");
     }
@@ -24,14 +26,17 @@ class Navbar extends Component  {
 
         return(
             <div className="componentContainer">
-                <nav className="mobileMenu">
+                <nav 
+                    className="mobileMenu"
+                    ref={this.closeRef}
+                >
                     <svg
                         xmlns='http://www.w3.org/2000/svg'
                         width='45'
                         height='45'
                         viewBox='0 0 512 512'
                         className="mobileMenu__closeMobile"
-                        // onClick={ }
+                        onClick={ () => {this.closeMenu()} }
                     >
                     <title>ionicons-v5-l</title>
                     <line 
@@ -49,6 +54,12 @@ class Navbar extends Component  {
                         style={{fill:'none', stroke: '#fff', strokeLinecap:'round', strokeLinejoin:'round', strokeWidth:'32px'}}
                     />
                     </svg>
+
+                    <div className="mobileMenu__options">
+                        <span>Quem sou eu</span>
+                        <span>Projetos</span>
+                        <span>Contato</span>
+                    </div>
                 </nav>
                 <nav className="navbar">
                     <div className="navbar__logo">
