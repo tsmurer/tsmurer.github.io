@@ -18,7 +18,7 @@ class Navbar extends Component  {
     closeMenu() {
         this.closeRef.current.classList.add(`fadeOut`);
         //this.props.receivedRef.current.classList.add(`toView`);
-        console.log("closeMenu rodou");
+        console.log("openMenu rodou");
     }
 
     openMenu() {
@@ -30,7 +30,7 @@ class Navbar extends Component  {
 
         return(
             <div className="componentContainer">
-                <nav 
+                {/* <nav 
                     className="mobileMenu"
                     ref={this.closeRef}
                 >
@@ -64,7 +64,7 @@ class Navbar extends Component  {
                         <span>Projetos</span>
                         <span>Contato</span>
                     </div>
-                </nav>
+                </nav> */}
                 <nav className="navbar">
                     <div className="navbar__logo">
                         <h2>Tiago Murer</h2>

@@ -10,18 +10,16 @@ import PropTypes from "prop-types"
 
 //import NavigationWrapper from "./navigationWrapper"
 import Navbar from "./navbar"
+import Presentation from "./presentation"
 
 const Layout = ({ children }) => {
   return (
     <>
      
         <Navbar/>
+        <Presentation/>
         <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
+        
     </>
   )
 }
