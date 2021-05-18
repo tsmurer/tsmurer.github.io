@@ -1,13 +1,13 @@
+@import "../utils/mixins";
 @import "../utils/variables";
 
 .navbar {
     width: 100%;
-    height: 64px;
-    background-color: #ffffff;
+    height: $navbar-height;
 
     position: absolute;
     top: 0;
-    left: 0;
+    @include centralize(true, false);
 
     display: flex;
     gap: 5rem;
@@ -15,27 +15,29 @@
     align-items: center;
     justify-content: space-between;
 
+    background-color: $color-secondary;
     color: $color-primary;
 
-    &__logo {
-        display: inline-block;
-        position: relative;
+    &__content {
+        max-width: $desktop-content-width;
+        width: 100%;
+        @include centralize(true, false);
 
-        padding: 0;
-
-        margin-left: 3rem;
-
-
-        & h2 {
-            line-height: 1.5;
-            vertical-align: center;
-            margin: 0;
-            font-size: 3rem;
-            font-weight: 100;
+        &__logo {
+        
+            display: inline-block;
+            padding: 0 2rem 0 2rem;
+            background-color: $color-quaternary;
+            height: 100%;
+            line-height: $navbar-height;
+            color: $color-secondary;
+            font-size: 2.5rem;
             white-space: nowrap;
             cursor: default;
         }
     }
+
+   
 
     &__info {
         display: flex;
@@ -43,11 +45,12 @@
 
         & a {
             text-decoration: none;
+            color: $color-primary;
         }
 
         & span {
             font-size: 1.5rem;
-            font-weight: 100;
+            font-weight: bold;
             white-space: nowrap;
             text-transform: uppercase;
         }
@@ -60,129 +63,9 @@
 
         &__icon {
 
-            flex-direction: row;
-            width: 4rem;
-            height: 4rem;
-
-            &--github {
-                fill: green;
-            }
-
-            &--linkedin {
-                fill: green;
-            }
+            color: $color-primary;
+            font-size: 4rem;
 
         }
-    }
-}
-
-.mobileMenu {
-    height: 100%;
-    width: 100%;
-    z-index: 1;
-    background-color: rgba(0, 0, 0, .8);
-    position: fixed;
-    top: 0;
-    left: 0;
-
-    &__closeMobile {
-        position: fixed;
-        right: 1rem;
-    }
-
-    &__options {
-        max-width: fit-content;
-
-        position: relative;
-        left: 50%;
-        top: 50%;
-
-        transform: translate(-50%, -50%);
-
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-        align-items: center;
-
-        color: #fff;
-
-        font-size: 3rem;
-
-        & span {
-            max-width: fit-content;
-            white-space: nowrap;
-        }
-    }
-}
-
-
-//RESPONSIVITY
-
-@media screen and (min-width: 748.1px) {
-    .mobileMenu, .mobile {
-        display: none;
-    }
-
-    .navbar__logo {
-        margin-right: 3rem;
-    }
-
-    .menu-container {
-        display: none;
-    }
-}
-
-@media screen and (max-width: 748px) {
-    .desktop {
-        display: none;
-    }
-
-    .mobile {
-        margin-right: 1rem;
-    }
-
-}
-
-//ANIMATIONS
-
-.fadeOut {
-    
-    animation: fadeOut .3s ease-out forwards;
-
-}
-
-@keyframes fadeOut {
-    0% {
-        opacity: 0.8
-    }
-
-    99% {
-        opacity: 0;
-        height: 100%;
-        width: 100%;
-    }
-
-    100% {
-        opacity: 0;
-        height: 0;
-        width: 0;
-    }
-}
-
-.appear {
-    animation: appear .3s ease-out forwards;
-}
-
-@keyframes appear {
-    0% {
-        opacity: 0;
-        height: 100%;
-        width: 100%;
-    }
-
-    100% {
-        opacity: 0.8;
-        height: 100%;
-        width: 100%;
     }
 }

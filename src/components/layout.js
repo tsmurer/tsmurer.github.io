@@ -10,14 +10,14 @@ import PropTypes from "prop-types"
 
 //import NavigationWrapper from "./navigationWrapper"
 import Navbar from "./navbar"
-import Presentation from "./presentation"
+import SectionGroup from "./section-group"
 
 const Layout = ({ children }) => {
   return (
     <>
      
         <Navbar/>
-        <Presentation/>
+        <SectionGroup/>
         <main>{children}</main>
         
     </>

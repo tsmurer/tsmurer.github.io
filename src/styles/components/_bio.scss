@@ -1,0 +1,23 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
+.bio {
+    color: #fff;
+    display: inline-block;
+    height: 100%;
+    @include centralize(true, true);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    padding: 3rem;
+    
+
+    &__title {
+        font-size: 4rem;
+    }
+
+    &__text {
+        font-size: 2rem;
+    }
+}
