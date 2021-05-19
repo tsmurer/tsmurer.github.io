@@ -5,7 +5,6 @@ import Layout from "../components/layout"
 
 const IndexPage = () => (
   <Layout>
-    {/* <SEO title="Dev" /> */}
   </Layout>
 )
 

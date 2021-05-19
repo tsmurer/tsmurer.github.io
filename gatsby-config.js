@@ -3,7 +3,7 @@ module.exports = {
     title: "tsmurer.github.io",
   },
   plugins: [
-    "gatsby-plugin-sass",
+    'gatsby-plugin-sass',
     "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
