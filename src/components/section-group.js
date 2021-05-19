@@ -22,8 +22,8 @@ class SectionGroup extends Component  {
         return(
             <div className="section-group">
                 <Presentation/>
-                <Skills/>
-                <Projects/>
+                {/* <Skills/>
+                <Projects/> */}
                 <Bio/>
             </div>
         )
