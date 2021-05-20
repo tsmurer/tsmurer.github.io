@@ -8,6 +8,7 @@
     &__content {
         @include centralize(true, true);
         max-width: $desktop-content-width;
+        padding: 3rem;
     }
 
     &--head {

@@ -27,10 +27,10 @@
         
             display: inline-block;
             padding: 0 2rem 0 2rem;
-            background-color: $color-quaternary;
+            // background-color: $color-quaternary;
             height: 100%;
             line-height: $navbar-height;
-            color: $color-secondary;
+            color:$color-quaternary;
             font-size: 2.5rem;
             white-space: nowrap;
             cursor: default;

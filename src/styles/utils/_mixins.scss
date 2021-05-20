@@ -12,3 +12,9 @@
       transform: translate(0, -50%);
     }
   }
+
+@mixin tablet {
+  @media (max-width: #{$tablet-content-width - 1px}) {
+    @content;
+  }
+}

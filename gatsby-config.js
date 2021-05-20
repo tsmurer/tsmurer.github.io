@@ -3,6 +3,14 @@ module.exports = {
     title: "tsmurer.github.io",
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `Roboto`,`Noto Sans JP`
+        ],
+      },
+    },
     'gatsby-plugin-sass',
     "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",
