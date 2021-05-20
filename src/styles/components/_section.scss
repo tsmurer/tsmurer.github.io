@@ -3,21 +3,16 @@
 .section {
     width: 100%;
     display: inline-block;
+    height: 100vh;
     
 
     &__content {
+        display: block;
         @include centralize(true, true);
+        height: auto;
         max-width: $desktop-content-width;
-        padding: 3rem;
     }
 
-    &--head {
-        height: calc(100vh - #{$navbar-height});
-    }
-
-    &--middle {
-        height: 100vh;
-    }
 
     &--primary {
         background-color: $color-primary;

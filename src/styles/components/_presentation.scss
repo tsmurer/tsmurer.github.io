@@ -8,7 +8,10 @@
     flex-direction: column;
     align-items: center;
     gap: 2rem;
-    //
+
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
 
     &__text { }
     
@@ -57,7 +60,6 @@
 
 @media screen and (min-width: 748.1px) {
     .presentation-box {
-        @include centralize(true, true);
         width: 50rem;
 
         &__title {

@@ -5,9 +5,9 @@
     width: 100%;
     height: $navbar-height;
 
-    position: absolute;
+    position: fixed;
+    z-index: 10;
     top: 0;
-    @include centralize(true, false);
 
     display: flex;
     gap: 5rem;
