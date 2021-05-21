@@ -19,7 +19,7 @@ class Presentation extends Component  {
     render() {
 
         return(
-            <div className="section">
+            <div className="section section--head">
                 <div className="section__content">
                     <div className="presentation-box">
                         <img className="presentation-box__selfie" src={selfie}/>

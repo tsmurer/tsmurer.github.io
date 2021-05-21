@@ -3,7 +3,7 @@ import React, { Component } from "react"
 
 import Presentation from "./presentation"
 // import Projects from "./projects"
-// import Skills from "./skills"
+import Skills from "./skills"
 // import Bio from "./bio"
 
 
@@ -22,7 +22,8 @@ class SectionGroup extends Component  {
         return(
             <div className="section-group">
                 <Presentation/>
-                {/* {/* <Skills/>
+                <Skills/>
+                {/*
                 <Projects/> 
                 <Bio/> */}
             </div>

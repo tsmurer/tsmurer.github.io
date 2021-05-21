@@ -1,7 +1,7 @@
 @import "../utils/variables";
-
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 
 .presentation-box {
     display: flex;
@@ -9,9 +9,7 @@
     align-items: center;
     gap: 2rem;
 
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
+    @include centralize(true,true);
 
     &__text { }
     
@@ -24,9 +22,9 @@
 
     &__subtitle {
         color: $color-tertiary;
-        font-family: 'Noto Sans JP', sans-serif;
-        font-size: 2rem;
-        font-weight: bold;
+        font-family: 'Playfair Display', serif;
+        font-size: 2.5rem;
+        text-align: center;
     }
 
     &__links {
