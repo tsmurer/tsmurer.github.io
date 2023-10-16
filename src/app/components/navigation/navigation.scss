@@ -1,0 +1,66 @@
+.navigationBar {
+    height: 4rem;
+    position: fixed;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 75%;
+    max-width: 900px;
+    background-color: #FAF9F6;
+    border-radius: 20px;
+    -webkit-box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.35);
+    -moz-box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.35);
+    box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.35);
+    font-size: 1.2rem;
+    color: #060606;
+    opacity: 75%;
+    z-index: 999;
+}
+
+li {
+    padding: 0 1rem 0 1rem;
+    cursor: pointer;
+    opacity: inherit;
+    height: 75%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 5px;
+
+    &:hover {
+        opacity: 100%;
+        color: #000;
+        background-color: #e7e7e7;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .navigationBar {
+        width: 90%;
+        font-size: 1rem;
+    }
+
+    li {
+        padding: 0 0.5rem 0 0.5rem;
+        &:hover {
+            background-color: inherit;
+        }
+    }
+  }
+
+  @media(max-width: 320px){ 
+    .navigationBar {
+        font-size: 0.75rem;
+    }
+
+    li {
+        height: 60%;
+        &:hover {
+            background-color: inherit;
+        }
+    }
+  }
+  
