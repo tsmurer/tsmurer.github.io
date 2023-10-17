@@ -1,56 +1,131 @@
 .hero {
-    display: block;
-    position: relative;
     height:100%;
     width: 100%;
+}
 
+.hero-bg {
+    position: absolute;
+    height: 100%;
+    width: 100%;
     background-color: #e5e5f7;
     opacity: 0.1;
     background-image:  linear-gradient(135deg, #444cf7 25%, transparent 25%), linear-gradient(225deg, #444cf7 25%, transparent 25%), linear-gradient(45deg, #444cf7 25%, transparent 25%), linear-gradient(315deg, #444cf7 25%, #e5e5f7 25%);
     background-position:  10px 0, 10px 0, 0 0, 0 0;
     background-size: 20px 20px;
     background-repeat: repeat;
+    z-index: -1;
 }
 
-// .blur {
-//     position: absolute;
-//     top: 0;
-//     height: 50rem;
-//     width: 100%;
-//     backdrop-filter: blur(10rem);
-
+.container {
+    display: grid;
+    grid-template-columns: 20rem 20rem 40rem;
+    grid-template-rows: 20rem 20rem;
+    grid-template-areas:    
+                "d1 d1 pp" 
+                "d2 d2 pp";
+    justify-content: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
     
+}
 
-//     &--green {
-//         transform: translateX(-10%);
-//         background: rgb(0,255,209);
-//         background: radial-gradient(circle, rgba(0,255,209,0.15) 2%, rgba(0,99,255,0) 60%);
-//     }
 
-//     &--blue {
-//         transform: translateX(10%);
-//         background: rgb(66, 90, 224);
-//         background: radial-gradient(circle, rgba(147, 81, 233, 0.15) 2%, rgba(0,99,255,0) 60%);
-//     }
-// }
+.profpic {
+    grid-area: pp;
+    & > img {
+        object-fit: cover;
+        width: 100%;
+        max-height: 100%;
+        border-radius: 100%;
+    }
+}
+
+.details1, .details2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.details1 {
+    font-size: 6rem;
+    grid-area: d1;
+    justify-content: left;
+    text-align: left;
+    padding-right:2rem;
+
+    &-header1 {
+        font-size: 4rem;
+        color: #444cf7;
+    }
+
+    &-header2 {
+        color: #000;
+    }
+    
+}
+
+.details2 {
+    grid-area: d2;
+    align-items:first baseline;
+    gap: 1rem;
+
+    & > Button {
+        background-color: #444cf7;
+    }
+}
+
+.social-media {
+    width: 100%;
+    display: flex;
+    gap: 2rem;
+}
+
+.icon {
+    
+}
+
 
 @media screen and (max-width: 600px) {
     .blur {
         height: 100%;
         font-size: 1rem;
+    }
 
+    .container {
+        grid-template-columns: 10rem 10rem;
+        grid-template-rows: 10rem 10rem 20rem;
+        grid-template-areas:    
+                    "d1 d1" 
+                    "d2 d2"
+                    "pp pp";
+    }
 
-        &--green {
-            transform: translateX(-20%);
-            background: rgb(0,255,209);
-            background: radial-gradient(circle, rgba(0,255,209,0.15) 2%, rgba(0,99,255,0) 40%);
+    .details1 {
+        font-size: 3rem;
+        text-align: center;
+        padding: 0;
+
+        &-header1 {
+            font-size: 2rem;
         }
     
-        &--blue {
-            transform: translateX(20%);
-            background: rgb(66, 90, 224);
-            background: radial-gradient(circle, rgba(147, 81, 233, 0.15) 2%, rgba(0,99,255,0) 40%);
+        &-header2 {
+
         }
+    }
+
+    .details2 {
+        font-size: 1.2rem;
+        align-items: center;
+        justify-content: center;
+        gap: 2.5rem;
+        padding: 0 0 0 0;
+    }
+
+    .social-media {
+        justify-content: center;
+        gap: 2.5rem;
     }
 
 
