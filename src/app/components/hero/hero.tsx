@@ -2,6 +2,7 @@ import React from 'react';
 import './hero.scss';
 import Button from '@mui/material/Button';
 import { Download, GitHub, LinkedIn } from '@mui/icons-material';
+import Image from 'next/image';
 
 export default function Hero() {
     return <div className="hero">
@@ -18,7 +19,7 @@ export default function Hero() {
                 <Button variant="contained" endIcon={<Download/>}>My Resume</Button>
             </div>
             <div className="profpic">
-                <img src="/profPic.jpeg" className="profpic grid-2-col-2-row"/>
+                <Image src="/profPic.jpeg" alt="profile picture" className="profpic grid-2-col-2-row"/>
             </div>
         
         </div>
