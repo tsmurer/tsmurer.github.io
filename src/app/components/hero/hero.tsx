@@ -9,7 +9,7 @@ export default function Hero() {
         <div className="hero-bg"></div>
         <div className="container">
             <div className="details1">
-                <h3 className="details1-header1">Hello! I'm a </h3>
+                <h3 className="details1-header1">Hello! I&apos;m a </h3>
                 <h3 className="details1-header2">Software Developer</h3>
             </div>
             <div className="details2">
