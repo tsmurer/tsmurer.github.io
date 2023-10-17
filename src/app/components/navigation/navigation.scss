@@ -1,23 +1,23 @@
 .navigationBar {
-    height: 4rem;
-    position: fixed;
-    top: 1rem;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 75%;
-    max-width: 900px;
+    height: 5rem;
+    position: sticky;
+    top: 0;
+    left:0;
+    width: 100%;
     background-color: #FAF9F6;
-    border-radius: 20px;
-    -webkit-box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.35);
-    -moz-box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.35);
-    box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.35);
-    font-size: 1.2rem;
     color: #060606;
-    opacity: 75%;
+    opacity: 85%;
     z-index: 999;
+
+    font-weight: bold;
+
+    &__sections {
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+    }
 }
 
 li {
@@ -39,7 +39,7 @@ li {
 
 @media screen and (max-width: 600px) {
     .navigationBar {
-        width: 90%;
+        width: 100%;
         font-size: 1rem;
     }
 

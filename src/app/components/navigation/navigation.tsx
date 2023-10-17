@@ -8,7 +8,9 @@ export default function Navigation() {
     for(let l of links) {
         ul.push(<li>{l.name}</li>)
     }
-    return <ul className="navigationBar">
-        {ul}
-    </ul>
+    return <div className="navigationBar">
+        <ul className="navigationBar__sections">
+            {ul}
+        </ul>
+    </div>
 }
