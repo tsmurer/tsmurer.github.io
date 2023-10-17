@@ -33,11 +33,13 @@
 
 .profpic {
     grid-area: pp;
-    & > img {
+    border-radius: 100%;
+
+    & > Image {
         object-fit: cover;
-        width: 100%;
-        max-height: 100%;
-        border-radius: 100%;
+        width: 20%;
+        max-height: 20%;
+        
     }
 }
 
@@ -69,6 +71,7 @@
     grid-area: d2;
     align-items:first baseline;
     gap: 1rem;
+    font-size: 2rem;
 
     & > Button {
         background-color: #444cf7;
@@ -83,6 +86,12 @@
 
 .icon {
     
+}
+
+@media screen and (min-width: 900px) {
+    .hero-bg {
+        clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
+    }
 }
 
 
@@ -116,17 +125,14 @@
     }
 
     .details2 {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         align-items: center;
+        text-align: center;
         justify-content: center;
-        gap: 2.5rem;
+        gap: 1rem;
         padding: 0 0 0 0;
     }
 
-    .social-media {
-        justify-content: center;
-        gap: 2.5rem;
-    }
 
 
 }
