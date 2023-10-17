@@ -1,6 +1,7 @@
 import './page.scss'
 import Section from './components/section/section'
 import Hero from './components/hero/hero'
+import About from './components/about/about'
 
 export default function Home() {
   return (
@@ -8,6 +9,9 @@ export default function Home() {
         <Section>
           <Hero/>
         </Section> 
+        <Section>
+          <About/>
+        </Section>
     </main>
   )
 }
