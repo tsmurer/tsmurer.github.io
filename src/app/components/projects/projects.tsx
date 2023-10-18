@@ -2,7 +2,7 @@
 
 import React from 'react'
 import './projects.scss'
-import {makeStyles, createStyles } from '@mui/styles'
+import {css, jsx} from '@emotion/react'
 import { Tab} from '@mui/material'
 import { projects } from '@/lib/data';
 import TabContext from '@mui/lab/TabContext';
@@ -12,21 +12,12 @@ import Box from '@mui/material/Box';
 import Chip from '@mui/material/Chip'
 import { OpenInBrowser } from '@mui/icons-material';
 
-
-
-const useStyles = makeStyles({
-    root: {
-      fontSize: '1.2rem',
-    },
-});
-
 export default function Projects() {
     const handleChange = (event: React.SyntheticEvent, newValue: string) => {
         setValue(newValue);
       };
     const tabs = []
     const tabpanels = []
-    const styledChipClass = useStyles();
 
     let counter = 0;
     for(let i = 1; i <= projects.length; i++) {
@@ -34,7 +25,15 @@ export default function Projects() {
         let chips = [];
         let project = projects[i-1];
         for(let j = 1; j <= project.techstack.length; j++) {
-            chips.push(<Chip className={styledChipClass.root} key={counter} label={project.techstack[j - 1]} variant="outlined" />)
+            chips.push(<Chip 
+                key={counter}
+                label={project.techstack[j - 1]}
+                sx={{
+                    "& .MuiChip-label": {
+                      fontSize: "12px"
+                    }
+                  }}
+                variant="outlined" />)
             counter++
         }
         tabs.push(<Tab key={counter} label={projects[i-1].name} value={"" + i}></Tab>)

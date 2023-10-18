@@ -50,6 +50,10 @@
     top:0;
 }
 
+MuiChip-root, MuiChip-label {
+    font-size: 2rem !important;
+}
+
 @media screen and (max-width: 600px) {
     .projects {
         top: 7rem;
