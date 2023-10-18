@@ -2,7 +2,6 @@
 
 import React from 'react'
 import './projects.scss'
-import {css, jsx} from '@emotion/react'
 import { Tab} from '@mui/material'
 import { projects } from '@/lib/data';
 import TabContext from '@mui/lab/TabContext';
