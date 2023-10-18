@@ -1,14 +1,25 @@
 .projects {
     position: relative;
-
     display: flex;
     flex-direction: column;
     gap: 1rem;
     padding: 0 2rem 0 2rem;
+    top: 7rem;
 
     &__container {
         display: flex;
         flex-direction: column;
         gap: 1rem;
+    }
+}
+
+.anchor {
+    position: relative;
+    top:0;
+}
+
+@media screen and (max-width: 600px) {
+    .projects {
+        top: 7rem;
     }
 }

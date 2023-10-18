@@ -12,7 +12,7 @@ export default function Hero() {
             <h3 className="hero__container__header hero__container__header--2">Software Developer</h3>
             <p>My name is Tiago and I build stuff for the web.</p>
             <div className="buttons">
-                <Button variant="contained" color="secondary" startIcon={<Download/>}>Resume</Button>
+            <a href='/International_Resume.pdf' download><Button variant="contained" color="secondary" startIcon={<Download/>}>Resume</Button></a>
                 <Button variant="outlined" color="secondary" startIcon={<ChatBubbleOutline/>}>Contact Me</Button>
             </div>
         </div>

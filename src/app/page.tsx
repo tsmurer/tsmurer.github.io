@@ -7,13 +7,13 @@ import Projects from './components/projects/projects'
 export default function Home() {
   return (
     <main className="main">
-        <Section>
+        <Section title="" hash="home">
           <Hero/>
         </Section> 
-        <Section>
-          <About/>
+        <Section title="About me" hash="about">
+          <About />
         </Section>
-        <Section>
+        <Section title="Projects" hash="projects">
           <Projects/>
         </Section>
     </main>

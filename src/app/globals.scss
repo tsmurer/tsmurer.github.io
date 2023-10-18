@@ -1,6 +1,15 @@
+$base-light: #f1f5f9;
+$base-dark: #334155;
+
+
 * {
   padding: 0;
   margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 html {

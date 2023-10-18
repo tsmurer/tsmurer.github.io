@@ -20,14 +20,18 @@ export default function Projects() {
 
     const tabs = []
     const tabpanels = []
-
+    let counter = 0;
     for(let i = 1; i <= projects.length; i++) {
+        counter++;
         let chips = [];
-        for(let tech of projects[i-1].techstack) {
-            chips.push(<Chip key="i" label={tech} variant="outlined" />)
+        let project = projects[i-1];
+        for(let j = 1; j <= project.techstack.length; j++) {
+            chips.push(<Chip key={counter} label={project.techstack[j - 1]} variant="outlined" />)
+            counter++
         }
-        tabs.push(<Tab key="i" label={projects[i-1].name} value={"" + i}></Tab>)
-        tabpanels.push(<TabPanel key="i" value={"" + i}>
+        tabs.push(<Tab key={counter} label={projects[i-1].name} value={"" + i}></Tab>)
+        counter++
+        tabpanels.push(<TabPanel key={counter} value={"" + i}>
             <span>Repository URL:</span>
             <p>{projects[i-1].url}</p>
             <span>Description:</span>
@@ -38,14 +42,14 @@ export default function Projects() {
             </div>
 
         </TabPanel>)
+        counter++
     }
 
     const [value, setValue] = React.useState('1');
 
     return <div className="projects">
-            <h2 className="section-title">Projects</h2>
+            <div className="anchor" id="projects"></div>
             <div className="projects__container">
-                <hr></hr>
                 <div className="tabs">
                     <TabContext value={value}>
                         <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>

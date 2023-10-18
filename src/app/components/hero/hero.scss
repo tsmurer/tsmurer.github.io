@@ -1,6 +1,6 @@
 .hero-bg {
     position: absolute;
-    height: 60rem;
+    height: 100%;
     width: 100%;
     background-color: #e5e5f7;
     opacity: 0.1;
@@ -38,7 +38,7 @@
     display: flex;
     gap: 2rem;
 
-    & > Button {
+    & > a > Button {
         font-family: '__Inter_e66fe9', '__Inter_Fallback_e66fe9';
         font-size: 1.5rem;
     }
@@ -52,7 +52,7 @@
 @media screen and (max-width: 600px) {
 
     .hero-bg {
-        height: 100vh;
+        height: calc(100vh - 52px);
     }
 
     .hero__container {

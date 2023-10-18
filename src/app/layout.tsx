@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import './globals.css'
+import './globals.scss'
 import Navigation from './components/navigation/navigation'
 import Hero from './components/hero/hero'
 import Section from './components/section/section'

@@ -1,12 +1,21 @@
 .section {
     display: block;
-    height: 60rem;
+    height: calc(85vh + 5rem);
     width: 100%;
+    position:relative;
 
+}
+
+.anchor {
+    position: relative;
+    top: -5rem;
 }
 
 .section-title {
     font-size: 3.5rem;
+    position:relative;
+    top:5rem;
+    padding: 0 2rem 0 2rem;
 }
 
 @media screen and (max-width: 600px) {
