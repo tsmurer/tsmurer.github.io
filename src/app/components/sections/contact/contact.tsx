@@ -1,30 +1,32 @@
 "use client";
 
+import { useState } from 'react';
 import ContactForm from '../../contactForm/contactForm';
 import './contact.scss'
-import { useState } from 'react';
-
+import { Check } from '@mui/icons-material';
 
 export default function Contact() {
-    const [email, setEmail] = useState("")
-    const [messageContent, setMessageContent] = useState("")
 
+    const [successMessageClass, setSuccessMessageClass] = useState("noDisplay")
 
-    function onChangeEmail(newValue: string) {
-        setEmail(newValue)
+    const bringAMessage = () => {
+        setSuccessMessageClass("successMessage")
     }
-    function onChangeMessageContent(newValue: string) {
-        setMessageContent(newValue)
-    }
-
-    function printStuff() {
-        console.log(email + " " + messageContent)
-    }
-
     return <>
         <div className="anchor" id="contact"></div>
         <div className="contact-container">
-            <ContactForm/>
+            <div className={successMessageClass}>
+                <div className="card">
+                    <div className="success-icon">
+                        <Check sx={{ fontSize: 40, color: '#33CC33' }} />
+                    </div>
+                    <h2 className="card-title">Thank You!</h2>
+                    <p className="card-message">
+                        🚀 Your message has been received! I&apos;ll get back to you in no time.
+                    </p>
+                </div>
+            </div>
+            <ContactForm bringAMessage={bringAMessage}/>
         </div>
     </>
 }

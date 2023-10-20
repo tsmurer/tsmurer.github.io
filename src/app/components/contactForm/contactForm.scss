@@ -1,0 +1,11 @@
+.form-btn {
+    &:active {
+        animation: btn-color 1s forwards linear
+    }
+}
+
+.goneAway {
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}

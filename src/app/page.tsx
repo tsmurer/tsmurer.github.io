@@ -6,6 +6,7 @@ import Projects from './components/sections/projects/projects'
 import Contact from './components/sections/contact/contact'
 
 export default function Home() {
+  
   return (
     <main className="main">
         <Section title="" hash="hero">

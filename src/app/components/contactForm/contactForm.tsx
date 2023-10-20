@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './contactForm.scss'
 import {
   Button,
@@ -6,8 +6,11 @@ import {
   Input,
 } from 'antd';
 import { send } from '@emailjs/browser';
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
 
 
+const MySwal = withReactContent(Swal)
 
 const formItemLayout = {
   labelCol: {
@@ -33,14 +36,26 @@ const tailFormItemLayout = {
   },
 };
 
-const ContactForm: React.FC = () => {
-  const [form] = Form.useForm();
+interface ContactFormProps {
+  bringAMessage: () => void; // Define your prop type here
+}
 
+const ContactForm: React.FC<ContactFormProps> = (props) => {
+  const [form] = Form.useForm();
+  const [formAnimationClass, setFormAnimationClass] = useState("");
   const onFinish = (values: any) => {
     send('service_qz8dbbc', 'template_59n31gv', values, 'SQLBLHg9BTi7QgDbN')
     .then(function(response) {
-       console.log('SUCCESS!', response.status, response.text);
+      setFormAnimationClass("goneAway")
+      props.bringAMessage();
+      console.log('SUCCESS!', response.status, response.text);
+       
     }, function(error) {
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops... Sorry!',
+          text: 'I am most probably out of emails 😰. Could you reach me at tiagostaurenghi@gmail.com?',
+        })
        console.log('FAILED...', error);
     });
   };
@@ -48,6 +63,7 @@ const ContactForm: React.FC = () => {
 
   return (
     <Form
+      className={formAnimationClass}
       {...formItemLayout}
       labelCol={{
         span: 4,
@@ -87,7 +103,7 @@ const ContactForm: React.FC = () => {
         <Input.TextArea showCount maxLength={700} />
       </Form.Item>
       <Form.Item {...tailFormItemLayout}>
-        <Button type="primary" htmlType="submit">
+        <Button className="form-btn" type="primary" htmlType="submit">
           Send
         </Button>
       </Form.Item>
@@ -96,3 +112,7 @@ const ContactForm: React.FC = () => {
 };
 
 export default ContactForm;
+
+function sweetAlert(arg0: string, arg1: string, arg2: string) {
+  throw new Error('Function not implemented.');
+}

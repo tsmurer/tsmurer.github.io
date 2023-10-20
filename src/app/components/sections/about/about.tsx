@@ -1,21 +1,21 @@
-import './about.scss'
+import './about.scss';
 
-export default function about() {
-    return <>
-        <div className="anchor" id="about"></div>
-        <div className="about__container">
-            <div className="about__container__image">
-                <img
-                    src="/profPic.jpeg"
-                    alt="profilePicture"
-                />
-            </div>
-            <div className="about__container__text">
-                <p>Hello, I&apos;m Tiago, a dedicated programmer with three years of experience in the tech industry. I&apos;m passionate about coding and creating solutions that make a difference.</p>
-                <p>My journey in programming in 2018 when I first started to write JavaScript and Python scripts. I had just finished law school when got really curious about programming after bumping into Khan Academy&apos;s content on programming.</p>
-                <p>Since then, I finished a new graduation at the Sao Paulo&apos;s Federal Institute of Education, Science and Technology, and I am on my third job as a software developer, at Tata Consultancy Services.</p>
-
-            </div>
+export default function About() {
+  return (
+    <div className="about__container">
+      <div className="about__container__image">
+        <img src="/profPic.jpeg" alt="profilePicture" />
+      </div>
+      <div className="about__container__text">
+        <h1>Hello, I&apos;m Tiago</h1>
+        <div className="scrollable-content">
+          <p>I&apos;m a passionate programmer with three years of experience in web development.</p>
+          <p>My journey into programming began in 2018, and I quickly fell in love with creating solutions that make a difference.</p>
+          <p>With a strong foundation in JavaScript and Python, I&apos;ve contributed to innovative projects, tackled complex challenges, and delivered user-friendly interfaces.</p>
+          <p>I&apos;m eager to take on new opportunities to expand my skills and make a positive impact.</p>
+          <p>If you&apos;re looking for a dedicated and enthusiastic programmer to join your team, let&apos;s connect and discuss how I can contribute to your projects.</p>
         </div>
-    </>
+      </div>
+    </div>
+  );
 }
