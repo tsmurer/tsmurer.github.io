@@ -1,0 +1,28 @@
+name: PR Title Format
+
+on:
+  pull_request:
+    types: [opened, edited]
+
+jobs:
+  format-title:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Format PR title
+        uses: actions/github-script@v5
+        with:
+          script: |
+            const title = context.payload.pull_request.title;
+            const branchName = context.payload.pull_request.head.ref;
+            const [type, ...rest] = branchName.split('/');
+            const formattedTitle = `[${type}] ${rest.join(' ')}`;
+
+            if (title !== formattedTitle) {
+              console.log(`Changing PR title from "${title}" to "${formattedTitle}"`);
+              await github.pulls.update({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                pull_number: context.payload.pull_request.number,
+                title: formattedTitle,
+              });
+            }

@@ -6,3 +6,6 @@
 !index.html
 !dist/
 !dist/**
+!.github/
+!.github/workflows/
+!.github/workflows/*.yml
