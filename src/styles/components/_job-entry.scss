@@ -1,0 +1,22 @@
+.job-entry {
+    border: 1px dashed $text-color;
+    padding: 10px 25px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    &__icon {
+        stroke: $text-color;
+        width: 40px;
+        height: 40px;
+    }
+
+    &__data {
+        display: flex;
+        flex-direction: column;
+
+        & .date {
+            opacity: 0.7;
+        }
+    }
+}
