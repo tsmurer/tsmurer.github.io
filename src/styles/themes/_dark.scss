@@ -1,0 +1,17 @@
+// theme/_dark.scss
+
+// Dark Theme Colors
+$primary-color: #2980b9; // Dark blue
+$secondary-color: #27ae60; // Dark green
+$background-color: #000; // Dark background
+$text-color: #ecf0f1; // Light text
+$border-color: #444;
+$shadow-color: rgba(0, 0, 0, 0.5);
+
+// Dark theme specific styles (if any)
+body {
+  background-color: $background-color;
+  color: $text-color;
+}
+
+// You can add other dark theme-specific styles here...

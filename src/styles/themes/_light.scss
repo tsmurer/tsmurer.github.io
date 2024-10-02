@@ -1,0 +1,17 @@
+// theme/_light.scss
+
+// Light Theme Colors
+$primary-color: #3498db; // Light blue
+$secondary-color: #2ecc71; // Light green
+$background-color: #f4f4f9; // Light background
+$text-color: #333; // Dark text
+$border-color: #ddd;
+$shadow-color: rgba(0, 0, 0, 0.1);
+
+// Light theme specific styles (if any)
+body {
+  background-color: $background-color;
+  color: $text-color;
+}
+
+// You can add other light theme-specific styles here...

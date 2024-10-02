@@ -1,0 +1,60 @@
+/* CSS Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%; /* Set base font size */
+}
+
+body {
+    line-height: 1.5; /* Improve readability */
+    font-family: Arial, sans-serif; /* Set a default font */
+}
+
+/* Remove default styles for lists */
+ul,
+ol {
+    list-style: none;
+}
+
+/* Remove default styles for images */
+img {
+    max-width: 100%; /* Ensure images are responsive */
+    height: auto;
+    display: block; /* Avoid inline-block spacing */
+}
+
+/* Remove default styles for links */
+a {
+    text-decoration: none; /* Remove underline from links */
+    color: inherit; /* Inherit color from parent */
+}
+
+/* Remove default table styles */
+table {
+    border-collapse: collapse; /* Collapse borders */
+    width: 100%; /* Full width tables */
+}
+
+/* Set default styles for form elements */
+button,
+input,
+select,
+textarea {
+    font-family: inherit; /* Inherit font from body */
+    font-size: inherit; /* Inherit font size from body */
+    line-height: inherit; /* Inherit line height */
+}
+
+/* Provide some basic spacing for elements */
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 1em; /* Add spacing below headings */
+}
+
+p {
+    margin-bottom: 1em; /* Add spacing below paragraphs */
+}

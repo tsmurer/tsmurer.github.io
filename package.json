@@ -1,0 +1,20 @@
+{
+  "name": "tsmurer.github.io",
+  "version": "2.0.0",
+  "description": "my personal webpage and portfolio",
+  "main": "index.ts",
+  "scripts": {
+    "start": "eleventy --serve",
+    "deploy": "gh-pages -d dist",
+    "build": "eleventy",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "tsmurer",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "eleventy-sass": "^2.2.6",
+    "gh-pages": "^6.1.1",
+    "sass": "^1.79.4"
+  }
+}
