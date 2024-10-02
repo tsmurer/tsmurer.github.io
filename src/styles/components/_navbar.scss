@@ -19,17 +19,25 @@
     &__logo {
         margin-left: 25px;
     }
-    
+
+    &__buttons {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+        margin-right: 25px;
+
+        & a {
+            opacity: 0.6;
+
+            &.active {
+                opacity: 1;
+            }
+        }
+    }
+
   }
   
-  .navbar ul {
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    gap: 30px;
-    margin-right: 25px;
-    
-  }
   
   .nav-item a {
     font-size: 0.9rem;
@@ -38,6 +46,7 @@
     transition: color 0.3s ease-out;
     width: 40px;
   }  
+
   
   /* MOBILE MENU & ANIMATION */
   
