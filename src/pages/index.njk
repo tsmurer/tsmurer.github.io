@@ -5,5 +5,12 @@ permalink: /
 ---
 
 {% block content %}
-  <h1>Main Page Content</h1>
+  <div class="home-content">
+    <div class="home-content__col home-content__col--1">
+      {% include 'partials/personal-card.njk' %}
+    </div>
+    <div class="home-content__col home-content__col--2">
+      <span class="personal-data"></span>
+    </div>
+  </div>
 {% endblock %}
