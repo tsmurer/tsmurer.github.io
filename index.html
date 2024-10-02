@@ -8,14 +8,25 @@
 </head>
 <body>
   <header>
-    <nav class="navbar">
-  <h1 class="navbar__logo"><a href="/">tiago:murer</a></h1>
-  <ul class="navbar__buttons">
-    <li><a href="/" class="active">Home</a></li>
-    <li><a href="/about/" class="">About</a></li>
-    <li><a href="/projects/" class="">Projects</a></li>
-  </ul>
-</nav>
+    <script src="/scripts/navbar.js"></script>
+
+ <div class="nav-wrapper">
+  <nav class="navbar">
+    <h1 class="navbar__logo"><a href="/">tiago:murer</a></h1>
+    <div class="menu-toggle" id="mobile-menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+    <ul class="nav no-search">
+      <li><a href="/" class="active">Home</a></li>
+      <li><a href="/about/" class="">About</a></li>
+      <li><a href="/projects/" class="">Projects</a></li>
+    </ul>
+  </nav>
+  </div>
+
+
   </header>
 
   <main>
@@ -26,7 +37,11 @@
       <article class="personal-card">
     <picture><source type="image/webp" srcset="/images/fRNo0QM2Bm-300.webp 300w, /images/fRNo0QM2Bm-600.webp 600w" sizes="(min-width: 30em) 50vw, 100vw"><img alt="A nice picture of myself at Buenos Aires" loading="lazy" decoding="async" class="personal-card__img" src="/images/fRNo0QM2Bm-300.jpeg" width="600" height="600" srcset="/images/fRNo0QM2Bm-300.jpeg 300w, /images/fRNo0QM2Bm-600.jpeg 600w" sizes="(min-width: 30em) 50vw, 100vw"></picture>
     <h1 class="personal-card__title">Hi, I'm Tiago ✌️</h1>
-    <p class="personal-card__paragraph">I am a Software Engineer based in Sao Paulo - Brazil</p>
+    <div class="personal-card__paragraph">
+        <p>I am a Software Engineer based in São Paulo - 🇧🇷.</p>
+        <p>Currently working for Tata Consultancy Services.</p>
+    </div>
+
 </article>
 
 
