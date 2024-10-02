@@ -1,6 +1,2 @@
-# Ignore all files
-*
-# Except for these
-!.gitignore
-!dist/
-!dist/**
+/dist
+/node_modules
