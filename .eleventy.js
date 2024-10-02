@@ -5,6 +5,7 @@ module.exports = function(eleventyConfig) {
   
   // Add Sass plugin
   eleventyConfig.addPlugin(eleventySass);
+  eleventyConfig.addPassthroughCopy("src/scripts");
 
   // Define a shortcode for images
   eleventyConfig.addNunjucksAsyncShortcode("image", async (src, alt, widths, formats, className) => {
