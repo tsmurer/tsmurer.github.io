@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     const menuToggle = document.querySelector('.menu-toggle');
-    const nav = document.querySelector('.nav');
+    const nav = document.querySelector('.navbar__buttons');
 
     if (menuToggle && nav) { // Check if elements exist
         menuToggle.addEventListener('click', function() {
