@@ -1,2 +1,66 @@
 footer {
-}
+    background-color: $background-color; // Dark background for contrast
+    color: $text-color; // Light text color for readability
+    padding: 20px 10%; // Padding for space
+  
+    .footer-content {
+      display: flex; // Use flexbox for layout
+      justify-content: space-between; // Space between elements
+      align-items: center; // Center items vertically
+      flex-wrap: wrap; // Allow wrapping on smaller screens
+  
+      p {
+        margin: 0; // Remove default margin
+        font-size: 14px; // Set font size
+      }
+  
+      .footer-links {
+        list-style: none; // Remove default list styling
+        padding: 0; // Remove default padding
+        margin: 0; // Remove default margin
+        display: flex; // Display links in a row
+  
+        li {
+          margin-right: 20px; // Space between links
+  
+          a {
+            color: $text-color; // Link color
+            text-decoration: none; // Remove underline
+            transition: color 0.3s; // Smooth color transition on hover
+  
+            &:hover {
+              color: $text-color;; // Change link color on hover
+            }
+          }
+        }
+      }
+  
+      .social-media {
+        display: flex; // Use flexbox for social media links
+        gap: 15px; // Space between social links
+  
+        a {
+          color: $text-color; // Link color
+          text-decoration: none; // Remove underline
+          transition: color 0.3s; // Smooth color transition on hover
+  
+          &:hover {
+            color: $text-color; // Change color on hover
+          }
+        }
+      }
+    }
+  
+    @media (max-width: 768px) {
+      .footer-content {
+        flex-direction: column; // Stack elements vertically on small screens
+        align-items: center; // Center items
+        text-align: center; // Center text
+      }
+  
+      .footer-links {
+        margin: 10px 0; // Add margin around links
+      }
+    }
+  }
+  
