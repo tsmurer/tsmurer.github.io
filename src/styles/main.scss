@@ -8,14 +8,14 @@
 @import 'base/typography';
 @import 'base/base';
 
-// 3. Layout
+// 3. Themes (Import themes first)
+@import 'themes/dark';
+
+// 4. Layout
 @import 'layout/header';
 @import 'layout/footer';
 @import 'layout/grid';
 @import 'layout/container';
-
-// 4. Themes (Import themes first)
-@import 'themes/dark';
 //@import 'themes/light';
 
 // 5. Components (Now that themes are loaded)
