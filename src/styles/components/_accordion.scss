@@ -1,0 +1,50 @@
+
+
+.accordion {
+    
+    cursor: pointer;
+    background-color: $background-color;
+
+    &__title {
+        padding: 10px 15px;
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: $text-color;
+        background-color: $background-color;
+        border: 1px dashed $text-color;
+        border-radius: 10px;
+
+        &::after {
+            content: '';
+            width: 25px;
+            height: 25px;
+            background: url('../../images/icons/arrow.svg') no-repeat center center;
+            background-size: cover;
+            margin-right: 25px;
+            transition: 0.2s;
+          }
+    }
+
+
+    &__content {
+        padding: 15px;
+        background-color: $background-color;
+        &__item {
+            list-style: circle;
+            margin-left: 20px;
+        }
+    }
+
+    
+}
+
+.accordion[open] > summary::after {
+    transform: rotate(-90deg);
+}
+
+.accordion[open] .content {
+    max-height: 200px; /* Adjust according to your content */
+    transition: max-height 0.4s ease-in;
+}

@@ -17,12 +17,17 @@ permalink: /
       <hr>
       <h3 class="subtitle">Places I worked at</h3>
       <div class="work-places">
-        {% for job in collections.jobs %}
+        {% for job in jobs.jobs %}
           {% include 'partials/job-entry.njk' %}
         {% endfor %}
       </div>
       <hr>
       <h3 class="subtitle">Things I can do</h3>
+      <div class="accordions">
+        {% for skill in skills.skills %}
+           {% include 'partials/accordion.njk' %}
+        {% endfor %}
+      </div>
     </div>
   </div>
 {% endblock %}

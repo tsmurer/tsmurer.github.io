@@ -29,10 +29,6 @@ module.exports = function(eleventyConfig) {
     return Image.generateHTML(metadata, imageAttributes);
   });
 
-  eleventyConfig.addCollection("jobs", function(collectionApi) {
-    const jobsData = require("./src/_data/jobs.js");
-    return jobsData;
-  });
 
   return {
     dir: {

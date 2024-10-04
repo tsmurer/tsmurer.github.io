@@ -37,12 +37,20 @@
                 flex-direction: column;
                 gap: 20px;
                 margin-bottom: 30px;
+                padding: 0 20px;
 
                 &:hover .job-entry:not(:hover) {
                     opacity: 0.5;
                     filter: blur(.5px);
                     transition: all 0.3s ease;
                 }
+            }
+
+            & .accordions {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                padding: 0 20px;
             }
         }
     }

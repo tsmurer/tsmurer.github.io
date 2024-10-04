@@ -1,0 +1,20 @@
+{
+  "skills": [
+    {
+      "category": "Frontend",
+      "skillset": ["Angular", "TypeScript", "JavaScript", "HTML"]
+    },
+    {
+      "category": "Backend",
+      "skillset": ["Node.js", "Express", "JWT Authentication", "PostgreSQL"]
+    },
+    {
+      "category": "DevOps/Cloud",
+      "skillset": ["Docker", "AWS Lambda", "EventBridge"]
+    },
+    {
+      "category": "Version Control & Collaboration",
+      "skillset": ["Git", "Gerrit", "Jira"]
+    }
+  ]
+}
