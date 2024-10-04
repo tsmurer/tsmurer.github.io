@@ -1,0 +1,18 @@
+{
+    "jobs": [
+      {
+        "jobTitle": "Intern",
+        "company": "InfinitySys",
+        "date": "Mar 2019 - Dec 2019"
+      },
+      {
+      "jobTitle": "Frontend Dev",
+      "company": "Minesoft",
+      "date": "Mar 2021 - Aug 2021"
+    },
+    {
+      "jobTitle": "Fullstack Dev",
+      "company": "TCS",
+      "date": "Sep 2021 - Present"
+    }]
+}
