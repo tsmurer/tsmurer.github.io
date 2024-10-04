@@ -1,0 +1,6 @@
+{
+    "frontend": ["HTML", "CSS", "JavaScript", "React"],
+    "backend": ["Node.js", "Express", "MongoDB", "SQL"],
+    "tools": ["Git", "Webpack", "Docker"],
+    "cloud": ["AWS Lambda", "EventBridge", "S3"]
+  }
