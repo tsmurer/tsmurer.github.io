@@ -52,6 +52,24 @@
                 gap: 15px;
                 padding: 0 20px;
             }
+
+            .subtitle-and-btn {
+                display:flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 20px;
+                
+                & h3 {
+                    margin: 0;
+                }
+
+                & span {
+                    text-decoration: underline;
+                    cursor: pointer;
+                    margin-right: 20px;
+                }
+            }
         }
     }
 }

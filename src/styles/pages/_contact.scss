@@ -1,0 +1,57 @@
+
+.contact {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #1e1e1e;
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+  
+    p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+  
+    a {
+      color: #ffd700; /* Gold color */
+      text-decoration: none;
+  
+      &:hover {
+        color: #ff9800;
+        text-decoration: underline;
+      }
+  
+      i {
+        margin-right: 8px;
+      }
+    }
+  
+    /* Animation for the icons */
+    a:hover i {
+      transform: scale(1.1);
+      transition: transform 0.2s ease-in-out;
+    }
+  
+    /* Styling for the 🚧 emoji */
+    p:first-of-its-kind {
+      font-size: 1.3rem;
+      font-weight: bold;
+    }
+  
+    /* Responsive for mobile screens */
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+  
+      p {
+        font-size: 1.1rem;
+      }
+    }
+  }
