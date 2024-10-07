@@ -1,0 +1,22 @@
+.project {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    &__title_and_link {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+
+        & a {
+            text-decoration: underline;
+            color: $primary-color;
+        }
+    }
+    &__name {
+        margin: 0;
+    }
+
+
+}

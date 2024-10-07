@@ -20,10 +20,12 @@
 
 // 5. Components (Now that themes are loaded)
 @import 'components/accordion';
+@import 'components/chip';
 @import 'components/hero';
 @import 'components/job-entry';
 @import 'components/navbar';
 @import 'components/personal-card';
+@import 'components/project';
 
 // 6. Pages
 @import 'pages/home';

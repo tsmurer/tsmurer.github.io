@@ -1,0 +1,21 @@
+<article class="project">
+    <div class="project__title_and_link">
+        <h3 class="project__name"> {{ project.title }}</h3>
+        <span>[<a href="{{ project.url }}" target="_blank">link</a>]</span>
+    </div>
+    
+    <div class="project__description">
+        {{ project.description }}
+    </div>
+    <div class="project__screenshots">
+        {% for screenshot in project.screenshots %}
+            {% include 'partials/project-picture.njk' %}
+        {% endfor %}
+    </div>
+    <div class="project__tags">
+        {% for tag in project.tags %}
+            {% include 'partials/chip.njk' %}
+        {% endfor %}
+    </ul>
+
+</article>
