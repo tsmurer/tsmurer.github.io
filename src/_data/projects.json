@@ -2,7 +2,7 @@
     "projects": [
       {
         "title": "My GitHub Page",
-        "description": "This very website. I have built it as a multi-page static webpage for the structure, that gives a professional look and feel, the performance of a static website generator (I used Eleventy for this one), and the SEO optimization. It's also an opportunity to display my skills with the bare bones of the frontend skillset, since it uses no third-party UI component library, every component written by myself",
+        "description": "This very website. I have built it as a multi-page static application to emphasize user experience through a well defined structure. Besides that, Eleventy (a Static Site Generator, SSG for short) provides very performant builds and great SEO optimization. This was also an opportunity to display my skills with the bare bones of the frontend skillset, since it uses no third-party UI component library, every component written by myself",
         "url": "https://github.com/tsmurer/tsmurer.github.io",
         "screenshots": [
           {
