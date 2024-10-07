@@ -1,0 +1,20 @@
+{
+    "projects": [
+      {
+        "title": "My GitHub Page",
+        "description": "This very website. I have built it as a multi-page static webpage for the structure, that gives a professional look and feel, the performance of a static website generator (I used Eleventy for this one), and the SEO optimization. It's also an opportunity to display my skills with the bare bones of the frontend skillset, since it uses no third-party UI component library, every component written by myself",
+        "url": "https://github.com/tsmurer/tsmurer.github.io",
+        "screenshots": [
+          {
+            "url": "src/images/screenshots/gh-page-lighthouse.jpg", 
+            "caption": "Google Lighthouse Score Screenshot"
+            }],
+        "tags": [
+          {"name": "HTML"},
+          {"name": "CSS"},
+          {"name": "JavaScript"},
+          {"name": "Eleventy"}, 
+          {"name": "SSG"}]
+      }
+    ]
+  }

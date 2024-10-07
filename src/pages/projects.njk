@@ -9,6 +9,7 @@ permalink: /projects/
 
 {% block content %}
   <h1>Projects</h1>
-  <p>This section is under construction</p>
-  <p>Please be patient</p>
+  {% for project in projects.projects %}
+    {% include 'partials/project.njk' %}
+  {% endfor %}
 {% endblock %}

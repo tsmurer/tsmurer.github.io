@@ -1,0 +1,40 @@
+.project {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    &__title_and_link {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+
+        & a {
+            text-decoration: underline;
+            color: $primary-color;
+        }
+    }
+    &__name {
+        margin: 0;
+    }
+
+    &__tags {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        flex-wrap: wrap;
+        white-space: nowrap;
+    }
+
+    &__description, .project__screenshots, .project__tags {
+        padding-left: 15px;
+    }
+
+
+}
+
+@media (max-width: 768px) {
+    .project__tags {
+        gap: 5px;
+    }
+}
